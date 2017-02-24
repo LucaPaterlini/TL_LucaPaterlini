@@ -3,7 +3,7 @@
 from json import dumps
 from sys import argv
 
-from TL_LucaPaterlini.hackernews_lib import acquire_hakernews_list
+from hackernews_lib import acquire_hakernews_list
 
 # COSTANTS
 LIMIT = 100

@@ -1,9 +1,8 @@
 import os
 import sys
 import unittest
-
 sys.path.append('..')
-sys.path.append(os.path.join('..', 'hackernews_lib'))
+
 from hackernews_lib import *
 
 
@@ -35,6 +34,7 @@ class EachFunction(unittest.TestCase):
     def test_scrape_subtitle(self):
         self.__test_scaraper("./hackernews_tests/tests_input/scrape_subtitle_in",
                              "./hackernews_tests/tests_output/scrape_subtitle_out", scrape_subtitle)
+
 
     def test_scrape_article(self):
         # tests all test in name_input_top and name_input_subtitle comparing the results

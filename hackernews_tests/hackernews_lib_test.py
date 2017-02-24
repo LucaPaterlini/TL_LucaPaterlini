@@ -4,7 +4,7 @@ import unittest
 
 sys.path.append('..')
 sys.path.append(os.path.join('..', 'hackernews_lib'))
-from TL_LucaPaterlini.hackernews_lib import *
+from hackernews_lib import *
 
 
 class EachFunction(unittest.TestCase):

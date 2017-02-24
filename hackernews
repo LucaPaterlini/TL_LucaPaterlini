@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 from json import dumps
 from sys import argv
+from sys import exit
 
 from hackernews_lib import acquire_hakernews_list
 
@@ -13,7 +14,7 @@ def usage():
     # remember to the user the usage of this application
     msg = "USAGE:\n--posts: how many posts to print A positive integer <= 100."
     print msg
-    sys.exit()
+    exit()
 
 
 def get_n():

@@ -1,7 +1,6 @@
 import os
 import sys
 import unittest
-sys.path.append('..')
 
 from hackernews_lib import *
 

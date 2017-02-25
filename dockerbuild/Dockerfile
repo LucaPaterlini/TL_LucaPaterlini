@@ -17,8 +17,8 @@ RUN pip install --upgrade pip \
 
 RUN git clone "https://github.com/LucaPaterlini/TL_LucaPaterlini.git" /tmp/hackernews
 
-ADD /tmp/hackernews/hackernews_lib/ /usr/lib/python2.7/ -r
-ADD /tmp/hackernews/hackernews /usr/bin
+RUN cp tmp/hackernews/hackernews_lib/ /usr/lib/python2.7/ -r
+RUN cp tmp/hackernews/hackernews /usr/bin
 RUN chmod +x /usr/bin/hackernews \
     && rm -Rf /tmp/hackernews
 

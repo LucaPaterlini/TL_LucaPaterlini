@@ -5,6 +5,7 @@ from rfc3986 import is_valid_uri
 # CONSTANTS
 LIMIT = 100
 POSTS_EACH_PAGE = 30
+APP_NAME = "hackernews"
 # -*-
 
 
@@ -12,17 +13,17 @@ class InputTest(unittest.TestCase):
     def test_wrong_arguments(self):
         # tests a list of wrong parameters expecting the error msg
         err_msg = "USAGE:\n--posts: how many posts to print A positive integer <= 100.\n"
-        app = "./hackernews"
+
         list_arg_tests = [("post", ""), ("--none", "42"), ("--posts", "101"), ("--posts", "-1")]
-        self.assertEquals(subprocess.check_output([app, ""]), err_msg)
+        self.assertEquals(subprocess.check_output([APP_NAME, ""]), err_msg)
         for name, val in list_arg_tests:
-            self.assertEquals(subprocess.check_output([app, name, val]), err_msg)
+            self.assertEquals(subprocess.check_output([APP_NAME, name, val]), err_msg)
 
     def test_all_valid_inputs(self):
         # tests every field returned from the app
         keys_str = "[u'author', u'comments', u'points', u'rank', u'title', u'uri']"
         for z in [1, POSTS_EACH_PAGE, LIMIT]:
-            result = subprocess.check_output(["./hackernews", "--posts", str(z)])
+            result = subprocess.check_output([APP_NAME, "--posts", str(z)])
             result = loads(result)
             self.assertEquals(z, len(result))
             for i in xrange(len(result)):

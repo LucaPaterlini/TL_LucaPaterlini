@@ -6,19 +6,21 @@ RUN apk --update add \
     git \
     libxml2-dev \
     libxslt-dev \
-    python \
     python-dev \
     py-pip
 
 RUN pip install --upgrade pip \
     lxml \
     pyquery \
-    rfc3986
+    rfc3986 \
+    nose
 
-RUN git clone "https://github.com/LucaPaterlini/TL_LucaPaterlini.git" /tmp/hackernews \
-    && cp /tmp/hackernews/hackernews_lib/ -r /usr/lib/python2.7/ \
-    && cp /tmp/hackernews/hackernews /usr/bin \
-    && chmod +x /usr/bin/hackernews \
+RUN git clone "https://github.com/LucaPaterlini/TL_LucaPaterlini.git" /tmp/hackernews
+
+ADD /tmp/hackernews/hackernews_lib/ /usr/lib/python2.7/ -r
+ADD /tmp/hackernews/hackernews /usr/bin
+RUN chmod +x /usr/bin/hackernews \
     && rm -Rf /tmp/hackernews
+
 
 ENTRYPOINT ash -c "ash"

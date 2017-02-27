@@ -52,7 +52,6 @@ the directory that has been previously downloaded.
 
 ```
 ./setup.sh
-
 ```
 Root priviledge are required.
 
@@ -61,7 +60,6 @@ Then you will be able to do
 
 ```
 hackernews --posts n 
-
 ```
 Where n is the number of the lasts post you want to show in json format as STDOUT.
 
@@ -71,28 +69,24 @@ Go into the installing dir
 
 ```
 cd dockerbuild
-
 ```
 
 Build the container
 
 ```
 docker build -t hackernews .
-
 ```
 
 Run it and also the image as well
 
 ```
 docker run -ti hackernews
-
 ```
 
 Now inside the container you are allowed to run
 
 ```
 hackernews --posts n 
-
 ```
 Where n is the number of the lasts post you want to show in json format as STDOUT.
 
@@ -104,6 +98,27 @@ In order to test the project before running it run the following command inside 
 ```
 python -m unittest discover -s hackernews_tests/ -p "*test.py" -v
 ```
+
+## Unistalling 
+
+Using Root priviledges.
+
+In order to unistall the program from your machine you can run
+
+```
+./purge.sh
+```
+
+Instead if you have used the installation inside the container mode.
+
+Using the root profile and priviledges.
+
+```
+docker rm hackernews ; docker rmi hackernews
+```
+
+
+
 
 ## Library used
 

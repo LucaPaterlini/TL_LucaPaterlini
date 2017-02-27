@@ -11,7 +11,10 @@ git clone https://github.com/LucaPaterlini/TL_LucaPaterlini.git
 ```
 
 or Download the zip and extract the files.
+<<<<<<< HEAD
 Open the currently downloaded directory.
+=======
+>>>>>>> 7e6fc28ed26d77c166c71203e5816faceecc49ea
 
 
 ### Dependancies
@@ -81,7 +84,11 @@ docker build -t hackernews .
 Run it and also the image as well
 
 ```
+<<<<<<< HEAD
 docker run --name hackernews -ti hackernews
+=======
+docker run -ti hackernews
+>>>>>>> 7e6fc28ed26d77c166c71203e5816faceecc49ea
 ```
 
 Now inside the container you are allowed to run

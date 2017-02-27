@@ -1,0 +1,35 @@
+#!/usr/bin/python
+# -*- coding:utf-8 -*-
+from json import dumps
+from sys import argv
+from sys import exit
+
+from hackernews_lib import acquire_hakernews_list
+
+# COSTANTS
+LIMIT = 100
+
+
+def usage():
+    # remember to the user the usage of this application
+    msg = "USAGE:\n--posts: how many posts to print A positive integer <= 100."
+    print msg
+    exit()
+
+
+def get_n():
+    # parse and manage the STDIO gotten from the user
+    # and returns the number of posts to shown
+    if len(argv) != 3:
+        usage()
+    check, str_n = argv[1:]
+    if check != '--posts' or not str_n.isdigit() or not 0 <= int(str_n) <= LIMIT:
+            usage()
+    return int(str_n)
+
+if __name__ == "__main__":
+    n = get_n()
+    # print the list of posts until n, from the current newest if n is valid
+    if n:
+        posts_list = acquire_hakernews_list(n)
+        print dumps(posts_list, indent=4, separators=(',', ': '))

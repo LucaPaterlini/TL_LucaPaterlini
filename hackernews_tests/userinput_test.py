@@ -5,7 +5,7 @@ from rfc3986 import is_valid_uri
 # CONSTANTS
 LIMIT = 100
 POSTS_EACH_PAGE = 30
-APP_NAME = "hackernews"
+APP_NAME = "./hackernews"
 # -*-
 
 

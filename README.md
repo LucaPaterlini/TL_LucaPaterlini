@@ -4,7 +4,7 @@ This is a scraper for the [Hacker News](https://news.ycombinator.com/) site.
 
 ## Getting Started
 
-Clone the project in any path u wish
+Clone the project in any path you wish
 
 ```
 git clone https://github.com/LucaPaterlini/TL_LucaPaterlini.git

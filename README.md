@@ -30,7 +30,7 @@ In order to run the project without installing it this is the dependancies list:
 
 ### Installing
 
-Install all dependancise by running 
+Install all dependancise by running with root permits.
 
 ```
 ./setup_dependancies.sh

@@ -25,13 +25,11 @@ In order to run the project without installing it this is the prerequisite list:
 4. libxml2-dev
 5. python-dev
 6. pip
-
 7. lxml
 8. pyquery
 9. rfc3986
 
-If you wish to install the program on your machine also bash/ash is needed
-
+If you wish to install the program on your machine also bash/ash is needed.
 Instead if you will install it into a container only docker is needed.
 
 ### USAGE
@@ -60,7 +58,7 @@ hackernews --posts n
 ```
 Where n is the number of the lasts post you want to show in json format as STDOUT.
 
-If you want to install into the container [Docker](https://docs.docker.com/engine/installation/)
+If you want to install into the container [Docker](https://docs.docker.com/engine/installation/) is require and as well Root priviledges are required.
 
 Go into the installing dir
 
@@ -99,4 +97,3 @@ In order to test the project before running it run the following command inside 
 ```
 python -m unittest discover -s hackernews_tests/ -p "*test.py" -v
 ```
-s

@@ -8,16 +8,15 @@ Clone the project in any path you wish
 
 ```
 git clone https://github.com/LucaPaterlini/TL_LucaPaterlini.git
-
 ```
 
 or Download the zip and extract the files in the directory.
 
 
-### Installing
+### Dependancies
 
 
-In order to run the project without installing it this is the prerequisite list:
+In order to run the project without installing it this is the dependancies list:
 
 1. libc-dev
 2. gcc
@@ -29,14 +28,22 @@ In order to run the project without installing it this is the prerequisite list:
 8. pyquery
 9. rfc3986
 
-If you wish to install the program on your machine also bash/ash is needed.
-Instead if you will install it into a container only docker is needed.
+### Installing
 
-### USAGE
+Install all dependancise by running 
 
-If you have made all the previus installation needed to run the project without a container now you are able to do.
+```
+./setup_dependancies.sh
+```
 
+Do this operation only if you are running the application without a container.
+
+### Usage
+
+If you have made all the previous installation needed to run the project without a container now you are able to do.
+```
 ./hackernews --posts n
+```
 
 Where n is the number of the lasts post you want to show in json format as STDOUT.
 

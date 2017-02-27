@@ -116,11 +116,8 @@ Instead if you have used the installation inside the container mode.
 Using the root profile and priviledges.
 
 ```
-docker rm hackernews ; docker rmi hackernews
+docker rm hackernews ; docker rmi hackernews; docker rmi alpine
 ```
-
-
-
 
 ## Library used
 

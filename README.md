@@ -110,3 +110,7 @@ python -m unittest discover -s hackernews_tests/ -p "*test.py" -v
 In this project I've used the [Pyquery](https://pypi.python.org/pypi/pyquery) library to easy access the dom in the jquery fashon.
 
 And I've use the [rfc3986](https://pypi.python.org/pypi/rfc3986) to be really sure that the url passed fitted the standard asked in the assignment.
+
+## Os used
+
+I've designed and tested the system on Lubuntu 16.04 LTS and the OS chosen for the container is Linux Alpine due to its lightweight.

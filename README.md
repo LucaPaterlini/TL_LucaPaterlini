@@ -10,7 +10,7 @@ Clone the project in any path you wish
 git clone https://github.com/LucaPaterlini/TL_LucaPaterlini.git
 ```
 
-or Download the zip and extract the files in the directory.
+or Download the zip and extract the files.
 
 
 ### Dependancies
@@ -104,3 +104,9 @@ In order to test the project before running it run the following command inside 
 ```
 python -m unittest discover -s hackernews_tests/ -p "*test.py" -v
 ```
+
+## Library used
+
+In this project I've used the [Pyquery](https://pypi.python.org/pypi/pyquery) library to easy access the dom in the jquery fashon.
+
+And I've use the [rfc3986](https://pypi.python.org/pypi/rfc3986) to be really sure that the url passed fitted the standard asked in the assignment.
